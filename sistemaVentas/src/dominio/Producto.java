@@ -13,17 +13,17 @@ public class Producto {
     private String nombre;
     private double precio;
     private static int contadorProductos; 
-    private int id;
+    
 
     public Producto() {
-        this.id= ++Producto.contadorProductos;
+        this.idProducto= ++Producto.contadorProductos;
     }
 
-    public Producto(int idProducto, String nombre, double precio, int contadorProductos) {
-        this.idProducto = idProducto;
+    public Producto(String nombre, double precio) {
+        this.idProducto = ++Producto.contadorProductos;
         this.nombre = nombre;
         this.precio = precio;
-        this.contadorProductos = contadorProductos;
+        //this.contadorProductos = contadorProductos;
     }
 
     public int getIdProducto() {
@@ -52,7 +52,7 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto: " + "idProducto: " + idProducto + "\n Nombre=" + nombre + ", precio=" + precio + ", contadorProductos=" + contadorProductos + '}';
+        return "\nProducto: " + "\nId:  " + idProducto + "\nNombre:  " + nombre + "\nPrecio: " + precio + "€\n";
     }
 
    

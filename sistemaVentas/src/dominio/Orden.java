@@ -4,53 +4,44 @@
  */
 package dominio;
 import dominio.Producto;
+import java.util.ArrayList;
 /**
  *
  * @author ingri
  */
 public class Orden {
-    private int idOrden ;
-    private Producto producto [];
+    //private int idOrden ;
+    private ArrayList<Producto> producto = new ArrayList<Producto>();
     private static int contadorOrdenes ; 
-    int maxProducto = 10;
-    private final int id;
+    static int maxProducto = 10;
+    private int idOrden;
     
     //contructor
 
     public Orden() {
-        this.id= ++Orden.contadorOrdenes;
+        this.idOrden= ++Orden.contadorOrdenes;
+        //this.producto = new ArrayList<Producto>();
     }
     
-//    public void agregarProductos (producto: Producto){
-//         
-//       
-//    }
-    public void agregarProductos (Producto productos){
-        int i=0;
+    //agregar productos
+    public void agregarProductos (Producto p){
+       this.producto.add(p);
         
-            for ( i=0; i<producto.length; i++){
-            
-            if(producto[i]=0){
-                
-                producto [i] = productos ;
-                ++Producto.contadorProductos ;
-            }
-            
-            else{
-                
-            }
-            
-            }
-    
     }
-
 
     //calcular
+    public double calcularOrden (){
+        double cont =0;
+        for (Producto p : producto) {
+            cont += p.getPrecio();
+            //cont = cont+ p.getPrecio();
+        }
+        return cont;
+    }
     //mostrar 
-    
-
-    
-
-    
+    public void mostrarOrden(){
+        
+        System.out.println("Orden"+ idOrden+" "+producto);
+    }
     
 }
