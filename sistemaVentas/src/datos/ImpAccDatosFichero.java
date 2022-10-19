@@ -17,21 +17,24 @@ import java.util.Scanner;
  *
  * @author ingri
  */
-public class Implementar {
+public class ImpAccDatosFichero implements Ordenes {
     //ORDENES
-    public static void crearArchivoOrden(String nombre){
+    @Override
+    public void crearArchivoOrden(String nombre){
         File archivo = new File(nombre);
         try {
+            
             PrintWriter salida = new PrintWriter(archivo);
             salida.close();
         } catch (FileNotFoundException ex){
             ex.printStackTrace(System.out);
         }
     }
-    public static void agregarArchivoOrden(String nombre, String contenido){
+     @Override
+    public void agregarArchivoOrden(String nombre, String contenido){
+        //escribimos en el archivo 
         PrintWriter salida = null;
         File archivo= new File(nombre);
-        
         try {
              salida =  new PrintWriter(new FileWriter(nombre, true));
              salida.println(contenido);
