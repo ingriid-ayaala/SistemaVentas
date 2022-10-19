@@ -24,7 +24,12 @@ public class ventaTest {
        Producto p4 = new Producto("patata",2.4);
        Producto p5 = new Producto("leche",2.54);
        Producto p6 = new Producto("fresa",2.58);
-       Producto p7 = new Producto("nata",2.57);
+       Producto p7 = new Producto("naranjas",2.57);
+       Producto p8 = new Producto("platano",2.57);
+       Producto p9 = new Producto("queso",2.57);
+       Producto p10 = new Producto("cafe",2.57);
+       Producto p11 = new Producto("agua",2.57);
+       
        //Metodos 
        //Agregar productos 
        Orden o1 = new Orden();
@@ -35,10 +40,18 @@ public class ventaTest {
        o1.agregarProductos(p5);
        o1.agregarProductos(p6);
        o1.agregarProductos(p7);
+       o1.agregarProductos(p8);
+       o1.agregarProductos(p9);
+       o1.agregarProductos(p10);
+       o1.agregarProductos(p11);
        //mostrar productos 
        o1.mostrarOrden();
-        System.out.println("TOTAL: "+o1.calcularOrden());
+       
+       //calcular el precio total del las ordenes 
+       System.out.println("TOTAL: "+o1.calcularOrden()+"€");
+      
        //o1.calcularOrden();
     }
+    //Manejo de ARCHIVOS
     
 }

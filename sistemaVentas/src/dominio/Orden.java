@@ -25,7 +25,14 @@ public class Orden {
     
     //agregar productos
     public void agregarProductos (Producto p){
-       this.producto.add(p);
+       if (maxProducto<=producto.size()) {
+            System.out.println("El limite de productos es 10");
+            
+       }else{
+             this.producto.add(p);
+       }
+        //System.out.println("");
+        //this.producto.add(p);
         
     }
 
@@ -36,12 +43,13 @@ public class Orden {
             cont += p.getPrecio();
             //cont = cont+ p.getPrecio();
         }
+        
         return cont;
     }
     //mostrar 
     public void mostrarOrden(){
         
-        System.out.println("Orden"+ idOrden+" "+producto);
+        System.out.println("Orden"+ idOrden+" Productos"+producto);
     }
     
 }
