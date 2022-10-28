@@ -18,12 +18,12 @@ import java.util.Scanner;
  * @author ingri
  */
 public interface Ordenes {
-
+    
     public void crearArchivoOrden(String nombre);
     
     public void agregarArchivoOrden(String nombre, String contenido);
     //creamos metodos sque juntes implementar con los objetos de venta test 
-   
+    public void leerArchivoOrden(String nombre);
      
     
 }

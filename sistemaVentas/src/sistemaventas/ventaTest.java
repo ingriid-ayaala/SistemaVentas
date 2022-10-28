@@ -4,6 +4,8 @@
  */
 package sistemaventas;
 
+import datos.Ordenes;
+import datos.ImpAccDatosFichero;
 import dominio.Orden;
 import dominio.Producto;
 
@@ -51,7 +53,33 @@ public class ventaTest {
        System.out.println("TOTAL: "+o1.calcularOrden()+"€");
       
        //o1.calcularOrden();
+       //Manejo de ARCHIVOS
+       Ordenes os1  = new Ordenes();
+       String nombreArchivo = "Ordenes.txt";
+       os1.crearArchivoOrden(nombreArchivo);
+       //os1.agregarArchivoOrden("Ordenes.txt", o1.);
+       
+       
+//       {
+//           @Override
+//           public void crearArchivoOrden(String nombre) {
+//               throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//           }
+//
+//           @Override
+//           public void agregarArchivoOrden(String nombre, String contenido) {
+//               throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//           }
+//
+//           @Override
+//           public void leerArchivoOrden(String nombre) {
+//               throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//           }
+//       };
+      
+      
     }
-    //Manejo de ARCHIVOS
+    
+    
     
 }

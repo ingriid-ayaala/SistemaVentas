@@ -19,8 +19,12 @@ import java.util.Scanner;
  */
 public class ImpAccDatosFichero implements Ordenes {
     //ORDENES
+    
+    public ImpAccDatosFichero(){
+    }
+
     @Override
-    public void crearArchivoOrden(String nombre){
+    public void crearArchivoOrden(String nombre) {
         File archivo = new File(nombre);
         try {
             
@@ -45,7 +49,8 @@ public class ImpAccDatosFichero implements Ordenes {
         }
         
     }
-    public static void leerArchivoOrden(String nombre){
+    @Override
+    public  void leerArchivoOrden(String nombre){
         BufferedReader entrada = null;
         //1 declaramos el file
         File archivo = new File (nombre);
@@ -66,6 +71,7 @@ public class ImpAccDatosFichero implements Ordenes {
         }
         
     }
+    
     public static void leerArchivoPorPalabraOrden(String nombre){
         File archivo = new File(nombre);
         try {
@@ -86,6 +92,7 @@ public class ImpAccDatosFichero implements Ordenes {
     
     }
     //PRODUCTOS
+    
     public static void crearArchivoProducto(String nombre){
         File archivo = new File(nombre);
         try {
@@ -95,6 +102,7 @@ public class ImpAccDatosFichero implements Ordenes {
             ex.printStackTrace(System.out);
         }
     }
+    
     public static void agregarArchivoProducto(String nombre, String contenido){
         PrintWriter salida = null;
         File archivo= new File(nombre);
@@ -109,6 +117,7 @@ public class ImpAccDatosFichero implements Ordenes {
         }
         
     }
+    
     public static void leerArchivoProducto(String nombre){
         BufferedReader entrada = null;
         //1 declaramos el file
@@ -130,6 +139,7 @@ public class ImpAccDatosFichero implements Ordenes {
         }
         
     }
+    
     public static void leerArchivoPorPalabraProducto(String nombre){
         File archivo = new File(nombre);
         try {
